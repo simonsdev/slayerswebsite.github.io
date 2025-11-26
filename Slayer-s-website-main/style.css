@@ -189,9 +189,7 @@ body {
         transition: background-color 0.3s;
     }
 
-    .nav-menu li:first-child a {
-        background-color: #f44336;
-    }
+    
 
     .nav-menu li a:hover {
         background-color: #333;
