@@ -208,26 +208,34 @@
                     </div>
 
                     <div class="card-body">
-                        <h3>Id LOVE to hear from you</h3>
+                        <h3>I'd LOVE to hear from you</h3>
                         <p class="card-text">If you have any inquiries at all
                             about my dealership,<br>please use the
                             contact form provided on the right.</p>
                     </div>
                 </div>
+				
+				<form name="myForm" onsubmit="return scripts\validation()">
+					<input type="text" placeholder="First Name" name="fname" id="fname" required>
+					<input type="text" placeholder="Second Name" name="lname" id="lname" required>
+					<br>
+					<input type="text" placeholder="Email" name="E" id="email" required>
+					<br>
+					<select name="Reason" id="reason">
+						<option value="Selection">--PLEASE SELECT--</option>
+						<option value="Quote Inquiry">Quote Inquiry</option>
+						<option value="Hiring">Looking for a job</option>
+						<option value="Other">Other</option>
+					</select>
+					<br>
+					<textarea rows="8" cols="55" name="user-question" id="user-question" placeholder="Message" required></textarea>
+					<div style="display: flex; justify-content: flex-start;">
 
-                <input type="text" class="one" placeholder="First Name">
-                <input type="text" class="one" placeholder="Second Name">
-                <br>
-                <input type="text" placeholder="Email">
-                <br>
-                <textarea rows="8" cols="55" name="user-question" id="user-question"></textarea>
-                <div style="display: flex; justify-content: flex-start;">
-
-                    <div>
-                        <form action="">
-                            <label for="submit"></label>
-                            <input type="button" value="Submit" id="submit" class="btn btn-outline-danger">
-                        </form>
+						<div>
+							
+							<label for="submit"></label>
+							<input type="submit" value="Submit" id="submit" class="btn btn-outline-danger">
+				</form>
                     </div>
                 </div>
             </div>
