@@ -40,7 +40,6 @@
 
 <body>
 
-    <!-- Navbar code here -->
     <style>
         * {
             margin: 0;
@@ -209,6 +208,23 @@
         }
     </style>
 
+	<div class="top-bar">
+        <div class="top-left" id="date"></div>
+    </div>
+    
+    <script>
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('en-US', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+        });
+        document.getElementById('date').textContent = formattedDate;
+    </script>
+
+
+
+
     <nav class="navigation">
         <ul class="nav-menu">
             <li><a href="index.html">HOME</a></li>
@@ -220,9 +236,7 @@
 
     </nav>
     <div id="page">
-        <video autoplay loop muted id="background-vid" src="videos/contact_bg_vid.mp4" type="video/mp4">Your browser
-            does not support the video
-            tag</video>
+        <video autoplay loop muted id="background-vid" src="videos/contact_bg_vid.mp4" type="video/mp4"></video>
 
         <div class="container">
             <div class="container-left">

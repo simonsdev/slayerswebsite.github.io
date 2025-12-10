@@ -177,7 +177,47 @@
                 font-size: 24px;
             }
         }
+		
+		.image-stack-container {
+            /* Centers the entire image block */
+            max-width: 800px; 
+            margin: 20px auto;
+            padding: 0 15px; /* Adds a little padding on the sides */
+        }
+
+        .cars_for_sale {
+            /* Makes the image take up the full width of its container */
+            width: 100%; 
+            /* Ensures proper stacking behavior */
+            display: block; 
+            /* Adds space below each image */
+            margin-bottom: 20px; 
+            /* Optional: makes images look uniform */
+            height: auto; 
+        }
+		
+		
+		
+		
     </style>
+	
+	<div class="top-bar">
+        <div class="top-left" id="date"></div>
+    </div>
+    
+    <script>
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('en-US', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+        });
+        document.getElementById('date').textContent = formattedDate;
+    </script>
+	
+	
+	
+	
     <nav class="navigation">
         <ul class="nav-menu">
             <li><a href="index.html">HOME</a></li>
@@ -191,22 +231,22 @@
     </div>
 
     <section>
-        <table rows="3" cols="3">
-            <tr>
-                <td><img src="img/car1.jpg" class="cars_for_sale" alt=""></td>
-                <td><img src="img/car2.jpg" class="cars_for_sale" alt=""></td>
-                <td><img src="img/car3.jpg" class="cars_for_sale" alt=""></td>
-            </tr>
-            <tr>
-                <td><img src="img/car4.jpg" class="cars_for_sale" alt=""></td>
-                <td><img src="img/car5.jpg" class="cars_for_sale" alt=""></td>
-                <td><img src="img/car6.jpg" class="cars_for_sale" alt=""></td>
-            </tr>
-            <tr>
-                <td><img src="img/car7.jpg" class="cars_for_sale" alt=""></td>
-                <td><img src="img/car8.jpg" class="cars_for_sale" alt=""></td>
-                <td><img src="img/car9.jpg" class="cars_for_sale" alt=""></td>
-            </tr>
+        
+            <div class="image-stack-container">
+                <img src="img/car1.jpg" class="cars_for_sale" alt="">
+				<p>Car 1</p>
+				<p>Price €50,000</p>
+				<p>Please enquire on contacts page.</p>
+				<img src="img/car2.jpg" class="cars_for_sale" alt="">
+				<p>Car 2</p>
+				<p>Price €80,000</p>
+				<p>Please enquire on contacts page.</p>
+                <img src="img/car3.jpg" class="cars_for_sale" alt="">
+				<p>Car 3</p>
+				<p>Price €100,000</p>
+				<p>Please enquire on contacts page.</p>
+            
+			
 
 
 
